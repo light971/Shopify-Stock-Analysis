@@ -1,0 +1,45 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ===============================
+# VS Code
+# ===============================
+.vscode/
+*.code-workspace
+
+# ===============================
+# Jupyter / Notebooks
+# ===============================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.nbconvert.ipynb
+
+# ===============================
+# Data
+# ===============================
+data/raw/
+data/processed/
+data/external/
+
+# ===============================
+# Reports / Outputs
+# ===============================
+reports/figures/
+reports/summary/
+
+# ===============================
+# Environment
+# ===============================
+.env
+.venv/
+env/

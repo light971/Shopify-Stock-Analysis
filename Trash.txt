@@ -1,0 +1,146 @@
+# =========================
+# 1.0-mc-data-cleaning.ipynb
+# Notebook: Data Cleaning
+# =========================
+
+# --- 1. IMPORTS ---
+import pandas as pd
+import sys, os
+
+# Assure-toi que Python trouve ton dossier scripts
+sys.path.append(os.path.abspath("../scripts"))
+
+from data_cleaning import summarize_data
+
+# Résumé rapide avant nettoyage
+summarize_data(df)
+
+# Import du script de nettoyage
+from data_cleaning import clean_data
+
+# --- 2. CHEMINS DE FICHIERS ---
+RAW_DATA_PATH = "../data/raw/retail_data.csv"
+PROCESSED_DATA_PATH = "../data/processed/retail_clean.csv"
+
+# --- 3. CHARGEMENT DES DONNÉES BRUTES ---
+print("Chargement des données brutes...")
+df_raw = pd.read_csv(RAW_DATA_PATH)
+print(f"Dimensions des données brutes: {df_raw.shape}")
+df_raw.head()
+
+# --- 4. NETTOYAGE DES DONNÉES ---
+print("Nettoyage des données...")
+df_clean = clean_data(df_raw)
+
+# Aperçu rapide après nettoyage
+print(f"Dimensions après nettoyage: {df_clean.shape}")
+df_clean.head()
+
+# --- 5. SAUVEGARDE DES DONNÉES TRAITÉES ---
+print(f"Sauvegarde des données nettoyées dans {PROCESSED_DATA_PATH} ...")
+df_clean.to_csv(PROCESSED_DATA_PATH, index=False)
+print("✅ Sauvegarde terminée !")
+
+# --- 6. STATISTIQUES RAPIDES (OPTIONNEL) ---
+print("Statistiques descriptives après nettoyage :")
+display(df_clean.describe())
+
+
+# =========================
+# 1.0-mc-data-cleaning.ipynb
+# Notebook: Data Cleaning
+# =========================
+
+# --- 1. IMPORTS ---
+import pandas as pd
+import sys, os
+
+# Assure-toi que Python trouve ton dossier scripts
+sys.path.append(os.path.abspath("../scripts"))
+
+from data_cleaning import summarize_data
+
+# Résumé rapide avant nettoyage
+summarize_data(df)
+
+# Import du script de nettoyage
+from data_cleaning import clean_data
+
+# --- 2. CHEMINS DE FICHIERS ---
+RAW_DATA_PATH = "../data/raw/retail_data.csv"
+PROCESSED_DATA_PATH = "../data/processed/retail_clean.csv"
+
+# --- 3. CHARGEMENT DES DONNÉES BRUTES ---
+print("Chargement des données brutes...")
+df_raw = pd.read_csv(RAW_DATA_PATH)
+print(f"Dimensions des données brutes: {df_raw.shape}")
+df_raw.head()
+
+# --- 4. NETTOYAGE DES DONNÉES ---
+print("Nettoyage des données...")
+df_clean = clean_data(df_raw)
+
+# Aperçu rapide après nettoyage
+print(f"Dimensions après nettoyage: {df_clean.shape}")
+df_clean.head()
+
+# --- 5. SAUVEGARDE DES DONNÉES TRAITÉES ---
+print(f"Sauvegarde des données nettoyées dans {PROCESSED_DATA_PATH} ...")
+df_clean.to_csv(PROCESSED_DATA_PATH, index=False)
+print("✅ Sauvegarde terminée !")
+
+# --- 6. STATISTIQUES RAPIDES (OPTIONNEL) ---
+print("Statistiques descriptives après nettoyage :")
+display(df_clean.describe())
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import sys
+
+DATA_PATH = "../data/raw/sample_data.csv"
+df = pd.read_csv(DATA_PATH)
+print(df.head())
+print(df.describe())
+print(df.isnull().sum())
+
+plt.figure(figsize=(8, 5))
+sns.countplot(data=df, x="category")
+plt.title("Distribution by Category")
+plt.show()
+
+processed_path = "../data/processed/processed_data.csv"
+df.to_csv(processed_path, index=False)
+
+# Make sure Python can find your `src` folder
+sys.path.append(
+    os.path.abspath(
+        "/Users/malcomclosse/Documents/Formation_Data_Analyst/Projet-final/data-analyst-template/scripts/data_visualization.py"
+    )
+)
+
+
+# 2.0
+import pandas as pd
+from config import DATA_PROCESSED, REPORTS_SUMMARY
+from data_analysis import get_sales_summary
+
+orders = pd.read_csv(DATA_PROCESSED + "orders_clean.csv")
+products = pd.read_csv(DATA_PROCESSED + "products_clean.csv")
+
+summary = get_sales_summary(orders, products)
+summary.to_csv(REPORTS_SUMMARY + "sales_summary.csv", index=False)
+
+summary
+
+#3.0
+import pandas as pd
+from config import REPORTS_SUMMARY, REPORTS_FIGURES
+from data_visualization import plot_sales_by_category, plot_correlation_matrix
+
+summary = pd.read_csv(REPORTS_SUMMARY + "sales_summary.csv")
+plot_sales_by_category(summary, save_path=REPORTS_FIGURES + "sales_by_category.png")
+plot_correlation_matrix(summary, save_path=REPORTS_FIGURES + "correlation_matrix.png")
