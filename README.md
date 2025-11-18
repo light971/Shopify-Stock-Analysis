@@ -104,10 +104,9 @@ The Power BI dashboard is designed following data storytelling principles:
 
 ### **Top Section — KPIs**
 - Current Closing Price  
-- Daily Return  
-- 7-Day Trend (%)  
+- Daily Return (%)   
 - Volatility  
-- High–Low Range  
+- Avg Volume  
 
 ### **Middle Section — Visuals**
 - Stock Price over Time (Line Chart)  
