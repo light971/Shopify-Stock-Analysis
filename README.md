@@ -1,55 +1,165 @@
-# 🧠 Data Analyst Project Template
+📊 Shopify Stock Data Analytics Project — End-to-End (Python • SQL • Power BI)
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Data%20Analyst%20Template-2856f7" alt="Datalumina Data Analyst Project" />
-</a>
+⭐ Project Overview
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org/)
-[![SQL](https://img.shields.io/badge/SQL-database-lightgrey?logo=postgresql)](https://www.postgresql.org/)
-[![Power BI](https://img.shields.io/badge/Power%20BI-reporting-yellow?logo=power-bi)](https://powerbi.microsoft.com/)
+This project is a complete Data Analyst case study, based on the Kaggle dataset Shopify Stock Data 2025. It demonstrates a full end-to-end analytics workflow, from raw data to interactive dashboard.
 
-## Overview
-Clean and organized structure for **data analysis projects**, including notebooks, scripts, SQL queries, and reports.
+🎯 Goal: Build a clean, simple, and professional pipeline suitable for a data analytics portfolio.
 
-## Setup
-1. Copy `.env.example` → `.env`
-2. Install dependencies: `pip install -r requirements.txt`
+➡️ Skills demonstrated:
+	•	Data cleaning & preparation (Python)
+	•	Financial KPI creation (Python & DAX)
+	•	Analytical SQL queries
+	•	Power BI dashboard design (Z-pattern, BI UX best practices)
+	•	Business storytelling & insights
 
-## Project Structure
+⸻
+
+🏷️ Badges
+
+
+⸻
+
+📚 Table of Contents
+	1.	Context & Objectives￼
+	2.	Project Structure￼
+	3.	Full Pipeline￼
+	4.	KPIs & Analysis￼
+	5.	Power BI Dashboard￼
+	6.	Key Business Insights￼
+	7.	Installation & Execution￼
+	8.	Tech Stack￼
+	9.	Author￼
+
+⸻
+
+🎯 Context & Objectives
+
+Shopify is a publicly traded company whose stock fluctuates depending on market conditions. The purpose of this project is to:
+	•	Analyze stock price movements across 2025.
+	•	Identify trends and volatility.
+	•	Highlight short-term market signals (daily change, moving averages, etc.).
+	•	Produce a simple, educational dashboard for investors.
+
+⸻
+
+📂 Project Structure
 ```
 │
 ├── data/
-│   ├── raw/             # Données brutes (non modifiées)
-│   ├── processed/       # Données nettoyées et prêtes à l’analyse
-│   └── external/        # Données externes (API, sources publiques, etc.)
+│   ├── raw/             # Raw data
+│   ├── processed/       # Cleaned data
+│   └── external/        # External datasets
 │
 ├── notebooks/
-│   ├── 0.0-data-cleaning.ipynb      # Chargement et nettoyage des données
-│   ├── 1.0-data-analysis.ipynb      # Analyses statistiques et KPIs
-│   └── 2.0-data-visualization.ipynb # Visualisations et graphiques
+│   ├── 0.0-data-cleaning.ipynb
+│   ├── 1.0-data-analysis.ipynb
+│   
 │
 ├── reports/
-│   ├── figures/         # Graphiques exportés (.png, .jpg)
-│   └── summary/         # Tableaux ou synthèses d’analyse (.csv)
+│   ├── dashborads/
+│   ├── figures/
+│   └── summary/
 │
 ├── src/
-│   ├── init.py
-│   ├── data_cleaning.py     # Fonctions de nettoyage des données
-│   ├── data_analysis.py     # Fonctions d’analyse et de calculs de KPIs
-│   └── data_visualization.py# Fonctions de visualisation
+│   ├── data_cleaning.py
+│   ├── data_analysis.py
+│   └── data_visualization.py
 │
-├── config.py # Paramètres globaux du projet (chemins, constantes, etc.)
-│
+├── config.py
 ├── requirements.txt
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
-## Workflow
-1. Data collection (CSV, SQL, API)  
-2. Data cleaning & preprocessing  
-3. EDA & visualization  
-4. Reporting & dashboards  
-5. Documentation in `reports/summary`
-# Template-data-analyst
+⸻
+
+🔄 Full Pipeline
+
+1️⃣ Data Cleaning (Python)
+	•	Date parsing and formatting
+	•	Duplicate removal
+	•	Numeric column validation
+	•	Export to tidy CSV → data/processed/
+
+2️⃣ Analysis & KPIs (Python + SQL)
+
+Financial KPIs built:
+	•	Daily Change %
+	•	7-Day Trend %
+	•	Volatility (STD)
+	•	High/Low Range
+	•	Moving Average (Close)
+
+SQL queries included:
+	•	Monthly volatility
+	•	Top gain/loss days
+	•	Statistical summaries
+
+3️⃣ Visualization (Power BI)
+
+Dashboard designed following:
+	•	Z-pattern visual reading
+	•	Clear KPI hierarchy
+	•	Consistent color logic (green = gain, red = loss)
+
+⸻
+
+📈 Power BI Dashboard
+
+Top section — KPIs (instant reading)
+	•	Close Price
+	•	Daily Change %
+	•	7D Trend %
+	•	Volatility
+
+Middle section — Time-series analysis
+	•	Close Price Over Time (line chart)
+	•	Daily % Change (column chart)
+
+Bottom section — Additional metrics
+	•	Trading Volume
+	•	High vs Low
+
+Color palette (optimized for finance):
+	•	Green: #27AE60
+	•	Red: #EB5757
+	•	Blue: #2F80ED
+	•	Grey: #BDBDBD
+
+⸻
+
+💡 Key Business Insights
+
+The dashboard highlights the following takeaways:
+	•	📉 High volatility observed during specific periods → indicates increased speculative activity.
+	•	🔄 Strong alternation between positive and negative days → market highly reactive to news.
+	•	📈 7-day trend reveals micro-cycles useful for short-term traders.
+	•	🟦 High/Low price range shows market pressure from buyers vs sellers.
+
+These insights help track key stock dynamics in a simplified format.
+
+⸻
+
+🛠 Installation & Execution
+
+pip install -r requirements.txt
+
+	1.	Add raw data to data/raw/
+	2.	Run 0.0-data-cleaning.ipynb
+	3.	Run 1.0-data-analysis.ipynb
+	4.	Import processed CSVs into Power BI
+
+⸻
+
+🧰 Tech Stack
+	•	Python (Pandas / Numpy / Matplotlib)
+	•	SQL (SQLite / DuckDB)
+	•	Power BI
+	•	Jupyter Notebook
+	•	Git & GitHub
+
+⸻
+
+👤 Author
+
+Project created by Malcom, Marketing Data Analyst.
