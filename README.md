@@ -17,6 +17,8 @@ This project is a complete Data Analyst case study, based on the Kaggle dataset 
 
 🏷️ Badges
 
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)  [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)  [![Power BI](https://custom-icon-badges.demolab.com/badge/Power%20BI-F1C912?logo=power-bi&logoColor=fff)](#) [![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff)](#)
+
 
 ⸻
 
