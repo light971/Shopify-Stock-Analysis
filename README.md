@@ -1,51 +1,72 @@
-📊 Shopify Stock Data Analytics Project — End-to-End (Python • SQL • Power BI)
+# 📈 Shopify Stock Analysis  
+**Data Cleaning • Exploratory Data Analysis • SQL • KPIs • Power BI Dashboard**
 
-⭐ Project Overview
+This project showcases a complete end-to-end data analysis workflow using real stock market data from Shopify (SHOP).  
+It was designed to demonstrate strong skills in **data wrangling, statistical analysis, SQL querying, data visualization, and BI reporting**.
 
-This project is a complete Data Analyst case study, based on the Kaggle dataset Shopify Stock Data 2025. It demonstrates a full end-to-end analytics workflow, from raw data to interactive dashboard.
+This repository is ideal for recruiters, hiring managers, or anyone evaluating my ability to deliver structured, clear, and business-oriented data insights.
 
-🎯 Goal: Build a clean, simple, and professional pipeline suitable for a data analytics portfolio.
+---
 
-➡️ Skills demonstrated:
-	•	Data cleaning & preparation (Python)
-	•	Financial KPI creation (Python & DAX)
-	•	Analytical SQL queries
-	•	Power BI dashboard design (Z-pattern, BI UX best practices)
-	•	Business storytelling & insights
+## ⭐ Project Highlights
 
-⸻
+- ✔️ Cleaned and transformed raw stock market data  
+- ✔️ Built KPIs such as **Daily Return**, **7-Day Trend**, **High/Low Price Range**, **Volatility**, and **Moving Averages**  
+- ✔️ Performed SQL analysis for descriptive statistics and market behavior  
+- ✔️ Designed a **professional Power BI dashboard** for clear storytelling  
+- ✔️ Structured the entire project with a scalable and production-like folder architecture  
 
-🏷️ Badges
+---
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)  [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)  [![Power BI](https://custom-icon-badges.demolab.com/badge/Power%20BI-F1C912?logo=power-bi&logoColor=fff)](#) [![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff)](#)
+## 🎯 Objectives
 
+The goal of this project is to:
 
-⸻
+1. Understand the short-term behavior of Shopify stock  
+2. Identify volatility patterns and market signals  
+3. Build a reusable data analysis pipeline  
+4. Produce a dashboard that highlights financial insights in a business-friendly format  
+5. Demonstrate data analyst skills through a clean and well-documented project  
 
-📚 Table of Contents
-	1.	Context & Objectives￼
-	2.	Project Structure￼
-	3.	Full Pipeline￼
-	4.	KPIs & Analysis￼
-	5.	Power BI Dashboard￼
-	6.	Key Business Insights￼
-	7.	Installation & Execution￼
-	8.	Tech Stack￼
-	9.	Author￼
+---
 
-⸻
+## 🧠 Key Insights (Business + Data)
 
-🎯 Context & Objectives
+- Shopify’s stock price shows **frequent high volatility**, suggesting strong reactivity to market news  
+- The **7-day trend metric** highlights several micro-cycles useful for short-term traders  
+- **Daily return fluctuations** reveal clear periods of momentum vs. correction  
+- The High–Low daily range provides visibility into market pressure and trader sentiment  
+- Volatility analysis helps evaluate the level of investment risk  
 
-Shopify is a publicly traded company whose stock fluctuates depending on market conditions. The purpose of this project is to:
-	•	Analyze stock price movements across 2025.
-	•	Identify trends and volatility.
-	•	Highlight short-term market signals (daily change, moving averages, etc.).
-	•	Produce a simple, educational dashboard for investors.
+These insights can support short-term decision-making for investors or portfolio managers.
 
-⸻
+---
 
-📂 Project Structure
+## 🛠️ Tech Stack
+
+**Languages & Tools:**  
+- Python  
+- SQL  
+- Power BI  
+- Jupyter Notebook  
+- Git & GitHub  
+
+**Python Libraries:**  
+- Pandas  
+- NumPy  
+- Matplotlib / Seaborn (optional)  
+
+**Concepts Used:**  
+- Data cleaning  
+- Exploratory Data Analysis (EDA)  
+- Time-series metrics  
+- Financial indicators  
+- Dashboard design & storytelling  
+- Project structuring and modularization  
+
+---
+
+## 📂 Project Structure
 ```
 │
 ├── data/
@@ -73,95 +94,66 @@ Shopify is a publicly traded company whose stock fluctuates depending on market 
 └── README.md
 ```
 
-⸻
+This architecture follows best practices for clarity, scalability, and reproducibility.
 
-🔄 Full Pipeline
+---
 
-1️⃣ Data Cleaning (Python)
-	•	Date parsing and formatting
-	•	Duplicate removal
-	•	Numeric column validation
-	•	Export to tidy CSV → data/processed/
+## 📊 Dashboard Overview (Power BI)
 
-2️⃣ Analysis & KPIs (Python + SQL)
+The Power BI dashboard is designed following data storytelling principles:
 
-Financial KPIs built:
-	•	Daily Change %
-	•	7-Day Trend %
-	•	Volatility (STD)
-	•	High/Low Range
-	•	Moving Average (Close)
+### **Top Section — KPIs**
+- Current Closing Price  
+- Daily Return  
+- 7-Day Trend (%)  
+- Volatility  
+- High–Low Range  
 
-SQL queries included:
-	•	Monthly volatility
-	•	Top gain/loss days
-	•	Statistical summaries
+### **Middle Section — Visuals**
+- Stock Price over Time (Line Chart)  
+- Daily Return (%) (Bar Chart)  
 
-3️⃣ Visualization (Power BI)
+### **Bottom Section — Supporting Charts**
+- High–Low Comparison  
+- Volume Analysis (if included)  
 
-Dashboard designed following:
-	•	Z-pattern visual reading
-	•	Clear KPI hierarchy
-	•	Consistent color logic (green = gain, red = loss)
+Color palette:
+- **Green** → Positive growth  
+- **Red** → Negative variation  
+- **Blue/Grey** → Neutral elements  
 
-⸻
+---
 
-📈 Power BI Dashboard
+## ⚙️ How to Run the Project
 
-Top section — KPIs (instant reading)
-	•	Close Price
-	•	Daily Change %
-	•	7D Trend %
-	•	Volatility
+### **1. Clone the repository**
+```bash
+git clone https://github.com/light971/Shopify-Stock-Analysis.git
+cd Shopify-Stock-Analysis
+```
 
-Middle section — Time-series analysis
-	•	Close Price Over Time (line chart)
-	•	Daily % Change (column chart)
-
-Bottom section — Additional metrics
-	•	Trading Volume
-	•	High vs Low
-
-Color palette (optimized for finance):
-	•	Green: #27AE60
-	•	Red: #EB5757
-	•	Blue: #2F80ED
-	•	Grey: #BDBDBD
-
-⸻
-
-💡 Key Business Insights
-
-The dashboard highlights the following takeaways:
-	•	📉 High volatility observed during specific periods → indicates increased speculative activity.
-	•	🔄 Strong alternation between positive and negative days → market highly reactive to news.
-	•	📈 7-day trend reveals micro-cycles useful for short-term traders.
-	•	🟦 High/Low price range shows market pressure from buyers vs sellers.
-
-These insights help track key stock dynamics in a simplified format.
-
-⸻
-
-🛠 Installation & Execution
-
+2. Install dependencies
+```bash   
 pip install -r requirements.txt
+```
 
-	1.	Add raw data to data/raw/
-	2.	Run 0.0-data-cleaning.ipynb
-	3.	Run 1.0-data-analysis.ipynb
-	4.	Import processed CSVs into Power BI
+3. Prepare the dataset
 
-⸻
+Place your raw file in data/raw/
 
-🧰 Tech Stack
-	•	Python (Pandas / Numpy / Matplotlib)
-	•	SQL (SQLite / DuckDB)
-	•	Power BI
-	•	Jupyter Notebook
-	•	Git & GitHub
+5. Run the notebooks
+   
+   - 0.0-data-cleaning.ipynb → clean & preprocess the dataset
+   - 1.0-data-analysis.ipynb → compute KPIs & generate visuals
 
-⸻
+6. Open the Power BI report
 
-👤 Author
+Import the processed data from data/processed/
 
-Project created by Malcom, Marketing Data Analyst.
+## 🚀 Possible Improvements (Next Steps)
+
+- Add predictive models (ARIMA, LSTM, Prophet)
+- Integrate external data (news sentiment, macro indicators)
+- Automate the pipeline with Airflow or Prefect
+- Deploy an online dashboard using Streamlit / Dash
+- Add unit tests for data transformation scripts
