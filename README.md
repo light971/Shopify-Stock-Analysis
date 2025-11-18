@@ -157,3 +157,7 @@ Import the processed data from data/processed/
 - Automate the pipeline with Airflow or Prefect
 - Deploy an online dashboard using Streamlit / Dash
 - Add unit tests for data transformation scripts
+
+## 📄 License
+
+This project is released under the MIT License.
